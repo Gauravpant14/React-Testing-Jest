@@ -7,3 +7,14 @@ it('should show an image', () => {
   expect(img).toBeInTheDocument()
 
 })
+
+it('should show an element with a role attribute',() => {
+  render(<App/>);
+  //We are not assigning element to varibale instead of that directly using inside expect function
+  //trying to get a particular element using it's role attribute (role can be img ,heading etc...)
+  expect(screen.getByRole('link', { name: 'Learn React'})).toBeInTheDocument();
+  expect(screen.getByRole('img')).toBeInTheDocument();
+  expect(screen.getByRole('button', {pressed: true})).toBeInTheDocument();
+
+})
+
