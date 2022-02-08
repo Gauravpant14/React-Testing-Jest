@@ -1,10 +1,11 @@
 import './App.css';
-import Button from './components/button';
+import Counter from './components/Counter';
+
 
 function App() {
   return (
     <div className="App">
-      <Button content="Download" onClick={() => {}}/>
+      <Counter />
     </div>
   );
 }
